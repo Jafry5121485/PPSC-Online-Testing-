@@ -1,56 +1,54 @@
 const englishQuestions = [
-  {
-    question: "Choose the synonym of 'Abundant'.",
-    options: ["Scarce", "Plentiful", "Weak", "Empty"],
-    answer: 1
-  },
-  {
-    question: "Choose the antonym of 'Brave'.",
-    options: ["Bold", "Fearless", "Coward", "Strong"],
-    answer: 2
-  },
-  {
-    question: "Choose the correct spelling.",
-    options: ["Recieve", "Receive", "Receeve", "Receve"],
-    answer: 1
-  },
-  {
-    question: "Choose the synonym of 'Rapid'.",
-    options: ["Slow", "Fast", "Weak", "Late"],
-    answer: 1
-  },
-  {
-    question: "Choose the antonym of 'Ancient'.",
-    options: ["Old", "Historic", "Modern", "Past"],
-    answer: 2
-  },
-  {
-    question: "He ____ to school every day.",
-    options: ["go", "goes", "gone", "going"],
-    answer: 1
-  },
-  {
-    question: "They ____ playing cricket now.",
-    options: ["is", "are", "was", "be"],
-    answer: 1
-  },
-  {
-    question: "Choose the correct preposition: He is good ____ English.",
-    options: ["at", "in", "on", "for"],
-    answer: 0
-  },
-  {
-    question: "The opposite of 'Expand' is:",
-    options: ["Increase", "Grow", "Contract", "Develop"],
-    answer: 2
-  },
-  {
-    question: "Choose the correctly spelled word.",
-    options: ["Occasion", "Ocassion", "Occassion", "Ocasion"],
-    answer: 0
-  }
-];
-,
+{
+  question: "Choose the synonym of 'Abundant'.",
+  options: ["Scarce", "Plentiful", "Weak", "Empty"],
+  answer: 1
+},
+{
+  question: "Choose the antonym of 'Brave'.",
+  options: ["Bold", "Fearless", "Coward", "Strong"],
+  answer: 2
+},
+{
+  question: "Choose the correct spelling.",
+  options: ["Recieve", "Receive", "Receeve", "Receve"],
+  answer: 1
+},
+{
+  question: "Choose the synonym of 'Rapid'.",
+  options: ["Slow", "Fast", "Weak", "Late"],
+  answer: 1
+},
+{
+  question: "Choose the antonym of 'Ancient'.",
+  options: ["Old", "Historic", "Modern", "Past"],
+  answer: 2
+},
+{
+  question: "He ____ to school every day.",
+  options: ["go", "goes", "gone", "going"],
+  answer: 1
+},
+{
+  question: "They ____ playing cricket now.",
+  options: ["is", "are", "was", "be"],
+  answer: 1
+},
+{
+  question: "Choose the correct preposition: He is good ____ English.",
+  options: ["at", "in", "on", "for"],
+  answer: 0
+},
+{
+  question: "The opposite of 'Expand' is:",
+  options: ["Increase", "Grow", "Contract", "Develop"],
+  answer: 2
+},
+{
+  question: "Choose the correctly spelled word.",
+  options: ["Occasion", "Ocassion", "Occassion", "Ocasion"],
+  answer: 0
+},
 {
   question: "Choose the synonym of 'Honest'.",
   options: ["Truthful", "Clever", "Cruel", "Lazy"],
@@ -100,9 +98,8 @@ const englishQuestions = [
   question: "They ____ finished their work.",
   options: ["has", "have", "is", "was"],
   answer: 1
-}
-,
-{
+},
+  {
   question: "Choose the synonym of 'Famous'.",
   options: ["Unknown", "Well-known", "Hidden", "Secret"],
   answer: 1
@@ -119,7 +116,7 @@ const englishQuestions = [
 },
 {
   question: "Choose the correct article: He is ____ honest man.",
-  options: ["a", "an", "the", "no article"],
+  options: ["a", "an", "the", "No article"],
   answer: 1
 },
 {
@@ -137,9 +134,72 @@ const englishQuestions = [
   options: ["Rich", "Poor", "Weak", "Thin"],
   answer: 0
 },
-
-    ,
 {
+  question: "Choose the antonym of 'Victory'.",
+  options: ["Triumph", "Success", "Defeat", "Win"],
+  answer: 2
+},
+{
+  question: "Ali and Ahmed ____ friends.",
+  options: ["is", "are", "was", "has"],
+  answer: 1
+},
+{
+  question: "He is interested ____ science.",
+  options: ["on", "at", "in", "for"],
+  answer: 2
+},
+{
+  question: "Choose the synonym of 'Begin'.",
+  options: ["Start", "Stop", "Finish", "End"],
+  answer: 0
+},
+{
+  question: "Choose the antonym of 'Cheap'.",
+  options: ["Low", "Expensive", "Small", "Easy"],
+  answer: 1
+},
+{
+  question: "They ____ football every Sunday.",
+  options: ["play", "plays", "played", "playing"],
+  answer: 0
+},
+{
+  question: "She ____ to Lahore tomorrow.",
+  options: ["go", "goes", "will go", "gone"],
+  answer: 2
+},
+{
+  question: "Choose the correct preposition: Divide it ____ two parts.",
+  options: ["into", "on", "at", "for"],
+  answer: 0
+},
+{
+  question: "Choose the correct spelling.",
+  options: ["Achievement", "Acheivement", "Achievment", "Acheivment"],
+  answer: 0
+},
+{
+  question: "He ____ not agree with me.",
+  options: ["do", "does", "did", "done"],
+  answer: 1
+},
+{
+  question: "Choose the synonym of 'Danger'.",
+  options: ["Risk", "Safety", "Peace", "Comfort"],
+  answer: 0
+},
+{
+  question: "Choose the antonym of 'Increase'.",
+  options: ["Grow", "Reduce", "Raise", "Expand"],
+  answer: 1
+},
+{
+  question: "I have lived here ____ five years.",
+  options: ["since", "for", "from", "at"],
+  answer: 1
+},
+  {
   question: "Choose the synonym of 'Accurate'.",
   options: ["Correct", "Wrong", "Careless", "False"],
   answer: 0
@@ -156,7 +216,7 @@ const englishQuestions = [
 },
 {
   question: "Choose the correct article: It is ____ European country.",
-  options: ["a", "an", "the", "no article"],
+  options: ["a", "an", "the", "No article"],
   answer: 0
 },
 {
@@ -238,58 +298,109 @@ const englishQuestions = [
   question: "He is fond ____ reading books.",
   options: ["of", "in", "at", "on"],
   answer: 0
-}
-,
-{
-  question: "Choose the synonym of 'Courage'.",
-  options: ["Bravery", "Fear", "Weakness", "Silence"],
+},
+  {
+  question: "Choose the synonym of 'Accurate'.",
+  options: ["Correct", "Wrong", "Careless", "False"],
   answer: 0
 },
 {
-  question: "Choose the antonym of 'Optimistic'.",
-  options: ["Hopeful", "Positive", "Pessimistic", "Cheerful"],
-  answer: 2
-},
-{
-  question: "I ____ this book twice.",
-  options: ["read", "have read", "reads", "reading"],
+  question: "Choose the antonym of 'Permanent'.",
+  options: ["Lasting", "Temporary", "Fixed", "Stable"],
   answer: 1
 },
 {
-  question: "Choose the correct article: She bought ____ umbrella.",
-  options: ["a", "an", "the", "no article"],
+  question: "He ____ his homework before dinner.",
+  options: ["finish", "finished", "finishes", "finishing"],
   answer: 1
+},
+{
+  question: "Choose the correct article: It is ____ European country.",
+  options: ["a", "an", "the", "No article"],
+  answer: 0
 },
 {
   question: "Choose the correct spelling.",
-  options: ["Embarrass", "Embarass", "Embaras", "Embarrass"],
+  options: ["Knowledge", "Knowlege", "Knowlodge", "Knowladge"],
   answer: 0
 },
 {
-  question: "The baby ____ when the mother came.",
-  options: ["slept", "was sleeping", "sleep", "has slept"],
+  question: "The train ____ before we reached the station.",
+  options: ["leave", "left", "leaves", "leaving"],
   answer: 1
 },
 {
-  question: "Choose the synonym of 'Intelligent'.",
-  options: ["Clever", "Lazy", "Weak", "Slow"],
+  question: "Choose the synonym of 'Assist'.",
+  options: ["Help", "Ignore", "Refuse", "Leave"],
   answer: 0
 },
 {
   question: "Choose the antonym of 'Expand'.",
-  options: ["Increase", "Develop", "Contract", "Grow"],
+  options: ["Develop", "Contract", "Increase", "Grow"],
+  answer: 1
+},
+{
+  question: "Each student ____ a notebook.",
+  options: ["have", "has", "are", "were"],
+  answer: 1
+},
+{
+  question: "He insisted ____ paying the bill.",
+  options: ["on", "at", "in", "for"],
+  answer: 0
+},
+{
+  question: "Choose the synonym of 'Difficult'.",
+  options: ["Easy", "Hard", "Simple", "Clear"],
+  answer: 1
+},
+{
+  question: "Choose the antonym of 'Ancient'.",
+  options: ["Historic", "Old", "Modern", "Traditional"],
   answer: 2
 },
 {
-  question: "Neither Ali nor Ahmed ____ present.",
-  options: ["are", "were", "is", "have"],
-  answer: 2
+  question: "She ____ TV when I called.",
+  options: ["watched", "was watching", "watch", "has watched"],
+  answer: 1
 },
 {
-  question: "He is married ____ his cousin.",
-  options: ["with", "
-            ,
+  question: "Choose the correct preposition: He suffers ____ fever.",
+  options: ["from", "with", "at", "by"],
+  answer: 0
+},
 {
+  question: "Choose the correct spelling.",
+  options: ["Committee", "Comittee", "Commitee", "Committe"],
+  answer: 0
+},
+{
+  question: "They ____ already completed the project.",
+  options: ["has", "have", "had", "was"],
+  answer: 1
+},
+{
+  question: "Choose the synonym of 'Rapidly'.",
+  options: ["Slowly", "Quickly", "Silently", "Carefully"],
+  answer: 1
+},
+{
+  question: "Choose the antonym of 'Polite'.",
+  options: ["Kind", "Rude", "Gentle", "Friendly"],
+  answer: 1
+},
+{
+  question: "If it rains, we ____ at home.",
+  options: ["stay", "will stay", "stayed", "staying"],
+  answer: 1
+},
+{
+  question: "He is fond ____ reading books.",
+  options: ["of", "in", "at", "on"],
+  answer: 0
+},
+  
+  {
   question: "Choose the synonym of 'Valuable'.",
   options: ["Worthless", "Precious", "Cheap", "Common"],
   answer: 1
@@ -306,7 +417,7 @@ const englishQuestions = [
 },
 {
   question: "Choose the correct article: He is ____ MLA.",
-  options: ["a", "an", "the", "no article"],
+  options: ["a", "an", "the", "No article"],
   answer: 1
 },
 {
@@ -386,7 +497,7 @@ const englishQuestions = [
 },
 {
   question: "Choose the correctly spelled word.",
-  options: ["Conscience", "Consciense", "Conscience", "Conscince"],
+  options: ["Conscience", "Consciense", "Conscince", "Conscense"],
   answer: 0
-            }
-            
+}
+];
