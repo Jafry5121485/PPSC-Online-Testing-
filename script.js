@@ -1,35 +1,34 @@
 let currentQuestion = 0;
 let score = 0;
 
-const questionElement = document.getElementById("question");
-const optionButtons = document.querySelectorAll(".option");
-const scoreElement = document.getElementById("score");
-
 function loadQuestion() {
-    let q = englishQuestions[currentQuestion];
+    document.getElementById("question").innerHTML = englishQuestions[currentQuestion].question;
 
-    questionElement.innerText = q.question;
+    let options = document.getElementsByClassName("option");
 
-    optionButtons.forEach((btn, index) => {
-        btn.innerText = q.options[index];
-        btn.onclick = function () {
-            if (index === q.answer) {
-                score++;
-            }
+    for (let i = 0; i < 4; i++) {
+        options[i].innerHTML = englishQuestions[currentQuestion].options[i];
+    }
 
-            scoreElement.innerText = score;
-
-            currentQuestion++;
-
-            if (currentQuestion < englishQuestions.length) {
-                loadQuestion();
-            } else {
-                questionElement.innerText =
-                    "Test Completed! Your Score: " + score + "/" + englishQuestions.length;
-
-                optionButtons.forEach(btn => btn.style.display = "none");
-            }
-        };
-    });
+    document.getElementById("score").innerHTML = "Score: " + score;
 }
-loadQuestion();
+
+function checkAnswer(option) {
+    if (option == englishQuestions[currentQuestion].answer) {
+        score++;
+    }
+}
+
+function nextQuestion() {
+    currentQuestion++;
+
+    if (currentQuestion >= englishQuestions.length) {
+        document.getElementById("question").innerHTML =
+            "Test Completed! Final Score: " + score + "/" + englishQuestions.length;
+        return;
+    }
+
+    loadQuestion();
+}
+
+window.onload = loadQuestion;
