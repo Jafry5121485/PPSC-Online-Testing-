@@ -116,3 +116,26 @@ nav a{
     margin:8px 0;
     color:#444;
 }
+header{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.logo{
+    width:120px;
+    height:auto;
+    display:block;
+    margin:0 auto 10px;
+}
+
+header h1{
+    margin:10px 0 5px;
+    font-size:36px;
+}
+
+header p{
+    margin:0;
+    font-size:18px;
+}
