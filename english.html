@@ -18,12 +18,16 @@
 <h2>English Test</h2>
 
 <div class="subject-card">
-<p><strong>Question 1:</strong> Choose the correct synonym of "Abundant".</p>
+    <h3 id="question">Question will appear here</h3>
 
-<button class="btn">A) Scarce</button><br><br>
-<button class="btn">B) Plenty</button><br><br>
-<button class="btn">C) Empty</button><br><br>
-<button class="btn">D) Weak</button>
+    <button class="btn option" onclick="checkAnswer(0)"></button><br><br>
+    <button class="btn option" onclick="checkAnswer(1)"></button><br><br>
+    <button class="btn option" onclick="checkAnswer(2)"></button><br><br>
+    <button class="btn option" onclick="checkAnswer(3)"></button><br><br>
+
+    <button class="btn" onclick="nextQuestion()">Next Question</button>
+
+    <h3 id="score">Score: 0</h3>
 </div>
 
 </section>
