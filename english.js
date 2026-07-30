@@ -50,3 +50,343 @@ const englishQuestions = [
     answer: 0
   }
 ];
+,
+{
+  question: "Choose the synonym of 'Honest'.",
+  options: ["Truthful", "Clever", "Cruel", "Lazy"],
+  answer: 0
+},
+{
+  question: "Choose the antonym of 'Victory'.",
+  options: ["Success", "Defeat", "Triumph", "Win"],
+  answer: 1
+},
+{
+  question: "She ____ a letter yesterday.",
+  options: ["write", "writes", "wrote", "written"],
+  answer: 2
+},
+{
+  question: "If I ____ rich, I would help the poor.",
+  options: ["am", "was", "were", "be"],
+  answer: 2
+},
+{
+  question: "Choose the correct spelling.",
+  options: ["Environment", "Enviroment", "Envirnoment", "Enviornment"],
+  answer: 0
+},
+{
+  question: "He has been living here ____ 2020.",
+  options: ["for", "since", "from", "by"],
+  answer: 1
+},
+{
+  question: "The book is ____ the table.",
+  options: ["in", "on", "at", "by"],
+  answer: 1
+},
+{
+  question: "Choose the synonym of 'Tiny'.",
+  options: ["Huge", "Small", "Wide", "Long"],
+  answer: 1
+},
+{
+  question: "Choose the antonym of 'Accept'.",
+  options: ["Agree", "Receive", "Reject", "Allow"],
+  answer: 2
+},
+{
+  question: "They ____ finished their work.",
+  options: ["has", "have", "is", "was"],
+  answer: 1
+}
+,
+{
+  question: "Choose the synonym of 'Famous'.",
+  options: ["Unknown", "Well-known", "Hidden", "Secret"],
+  answer: 1
+},
+{
+  question: "Choose the antonym of 'Generous'.",
+  options: ["Kind", "Selfish", "Helpful", "Honest"],
+  answer: 1
+},
+{
+  question: "She ____ dinner before we arrived.",
+  options: ["has cooked", "had cooked", "cook", "cooks"],
+  answer: 1
+},
+{
+  question: "Choose the correct article: He is ____ honest man.",
+  options: ["a", "an", "the", "no article"],
+  answer: 1
+},
+{
+  question: "Choose the correct spelling.",
+  options: ["Necessary", "Necesary", "Neccessary", "Necassary"],
+  answer: 0
+},
+{
+  question: "The sun ____ in the east.",
+  options: ["rise", "rises", "rose", "rising"],
+  answer: 1
+},
+{
+  question: "Choose the synonym of 'Wealthy'.",
+  options: ["Rich", "Poor", "Weak", "Thin"],
+  answer: 0
+},
+
+    ,
+{
+  question: "Choose the synonym of 'Accurate'.",
+  options: ["Correct", "Wrong", "Careless", "False"],
+  answer: 0
+},
+{
+  question: "Choose the antonym of 'Permanent'.",
+  options: ["Lasting", "Temporary", "Fixed", "Stable"],
+  answer: 1
+},
+{
+  question: "He ____ his homework before dinner.",
+  options: ["finish", "finished", "finishes", "finishing"],
+  answer: 1
+},
+{
+  question: "Choose the correct article: It is ____ European country.",
+  options: ["a", "an", "the", "no article"],
+  answer: 0
+},
+{
+  question: "Choose the correct spelling.",
+  options: ["Knowledge", "Knowlege", "Knowlodge", "Knowladge"],
+  answer: 0
+},
+{
+  question: "The train ____ before we reached the station.",
+  options: ["leave", "left", "leaves", "leaving"],
+  answer: 1
+},
+{
+  question: "Choose the synonym of 'Assist'.",
+  options: ["Help", "Ignore", "Refuse", "Leave"],
+  answer: 0
+},
+{
+  question: "Choose the antonym of 'Expand'.",
+  options: ["Develop", "Contract", "Increase", "Grow"],
+  answer: 1
+},
+{
+  question: "Each student ____ a notebook.",
+  options: ["have", "has", "are", "were"],
+  answer: 1
+},
+{
+  question: "He insisted ____ paying the bill.",
+  options: ["on", "at", "in", "for"],
+  answer: 0
+},
+{
+  question: "Choose the synonym of 'Difficult'.",
+  options: ["Easy", "Hard", "Simple", "Clear"],
+  answer: 1
+},
+{
+  question: "Choose the antonym of 'Ancient'.",
+  options: ["Historic", "Old", "Modern", "Traditional"],
+  answer: 2
+},
+{
+  question: "She ____ TV when I called.",
+  options: ["watched", "was watching", "watch", "has watched"],
+  answer: 1
+},
+{
+  question: "Choose the correct preposition: He suffers ____ fever.",
+  options: ["from", "with", "at", "by"],
+  answer: 0
+},
+{
+  question: "Choose the correct spelling.",
+  options: ["Committee", "Comittee", "Commitee", "Committe"],
+  answer: 0
+},
+{
+  question: "They ____ already completed the project.",
+  options: ["has", "have", "had", "was"],
+  answer: 1
+},
+{
+  question: "Choose the synonym of 'Rapidly'.",
+  options: ["Slowly", "Quickly", "Silently", "Carefully"],
+  answer: 1
+},
+{
+  question: "Choose the antonym of 'Polite'.",
+  options: ["Kind", "Rude", "Gentle", "Friendly"],
+  answer: 1
+},
+{
+  question: "If it rains, we ____ at home.",
+  options: ["stay", "will stay", "stayed", "staying"],
+  answer: 1
+},
+{
+  question: "He is fond ____ reading books.",
+  options: ["of", "in", "at", "on"],
+  answer: 0
+}
+,
+{
+  question: "Choose the synonym of 'Courage'.",
+  options: ["Bravery", "Fear", "Weakness", "Silence"],
+  answer: 0
+},
+{
+  question: "Choose the antonym of 'Optimistic'.",
+  options: ["Hopeful", "Positive", "Pessimistic", "Cheerful"],
+  answer: 2
+},
+{
+  question: "I ____ this book twice.",
+  options: ["read", "have read", "reads", "reading"],
+  answer: 1
+},
+{
+  question: "Choose the correct article: She bought ____ umbrella.",
+  options: ["a", "an", "the", "no article"],
+  answer: 1
+},
+{
+  question: "Choose the correct spelling.",
+  options: ["Embarrass", "Embarass", "Embaras", "Embarrass"],
+  answer: 0
+},
+{
+  question: "The baby ____ when the mother came.",
+  options: ["slept", "was sleeping", "sleep", "has slept"],
+  answer: 1
+},
+{
+  question: "Choose the synonym of 'Intelligent'.",
+  options: ["Clever", "Lazy", "Weak", "Slow"],
+  answer: 0
+},
+{
+  question: "Choose the antonym of 'Expand'.",
+  options: ["Increase", "Develop", "Contract", "Grow"],
+  answer: 2
+},
+{
+  question: "Neither Ali nor Ahmed ____ present.",
+  options: ["are", "were", "is", "have"],
+  answer: 2
+},
+{
+  question: "He is married ____ his cousin.",
+  options: ["with", "
+            ,
+{
+  question: "Choose the synonym of 'Valuable'.",
+  options: ["Worthless", "Precious", "Cheap", "Common"],
+  answer: 1
+},
+{
+  question: "Choose the antonym of 'Ancient'.",
+  options: ["Old", "Historic", "Modern", "Traditional"],
+  answer: 2
+},
+{
+  question: "She ____ English fluently.",
+  options: ["speak", "speaks", "speaking", "spoken"],
+  answer: 1
+},
+{
+  question: "Choose the correct article: He is ____ MLA.",
+  options: ["a", "an", "the", "no article"],
+  answer: 1
+},
+{
+  question: "Choose the correct spelling.",
+  options: ["Accommodation", "Acommodation", "Accomodation", "Accommadation"],
+  answer: 0
+},
+{
+  question: "The students ____ in the classroom now.",
+  options: ["is", "are", "was", "be"],
+  answer: 1
+},
+{
+  question: "Choose the synonym of 'Brief'.",
+  options: ["Short", "Long", "Wide", "Large"],
+  answer: 0
+},
+{
+  question: "Choose the antonym of 'Include'.",
+  options: ["Contain", "Add", "Exclude", "Join"],
+  answer: 2
+},
+{
+  question: "He ____ his keys yesterday.",
+  options: ["lose", "lost", "loses", "losing"],
+  answer: 1
+},
+{
+  question: "Choose the correct preposition: He apologized ____ his mistake.",
+  options: ["for", "to", "at", "on"],
+  answer: 0
+},
+{
+  question: "Choose the synonym of 'Flexible'.",
+  options: ["Rigid", "Adaptable", "Hard", "Fixed"],
+  answer: 1
+},
+{
+  question: "Choose the antonym of 'Wise'.",
+  options: ["Clever", "Foolish", "Smart", "Bright"],
+  answer: 1
+},
+{
+  question: "By next year, I ____ my degree.",
+  options: ["complete", "completed", "will have completed", "completing"],
+  answer: 2
+},
+{
+  question: "Choose the correct spelling.",
+  options: ["Maintenance", "Maintainance", "Maintanance", "Maintenence"],
+  answer: 0
+},
+{
+  question: "The teacher ____ the lesson before the bell rang.",
+  options: ["finished", "had finished", "finishes", "finish"],
+  answer: 1
+},
+{
+  question: "Choose the synonym of 'Generous'.",
+  options: ["Kind", "Selfish", "Cruel", "Mean"],
+  answer: 0
+},
+{
+  question: "Choose the antonym of 'Victory'.",
+  options: ["Win", "Success", "Defeat", "Achievement"],
+  answer: 2
+},
+{
+  question: "Everyone ____ welcome.",
+  options: ["are", "is", "were", "have"],
+  answer: 1
+},
+{
+  question: "Choose the correct preposition: She is afraid ____ dogs.",
+  options: ["of", "from", "with", "at"],
+  answer: 0
+},
+{
+  question: "Choose the correctly spelled word.",
+  options: ["Conscience", "Consciense", "Conscience", "Conscince"],
+  answer: 0
+            }
+            
