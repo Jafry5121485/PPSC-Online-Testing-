@@ -501,3 +501,50 @@ const englishQuestions = [
   answer: 0
 }
 ];
+let currentQuestion = 0;
+let score = 0;
+let selectedAnswer = -1;
+
+const optionButtons = document.querySelectorAll(".option");
+
+function loadQuestion() {
+    const q = englishQuestions[currentQuestion];
+
+    document.getElementById("question").innerText =
+        (currentQuestion + 1) + ". " + q.question;
+
+    optionButtons.forEach((btn, index) => {
+        btn.innerText = q.options[index];
+        btn.style.background = "";
+    });
+
+    selectedAnswer = -1;
+}
+
+function checkAnswer(index) {
+    selectedAnswer = index;
+
+    optionButtons.forEach(btn => btn.style.background = "");
+    optionButtons[index].style.background = "#ffc107";
+}
+
+function nextQuestion() {
+
+    if (selectedAnswer === englishQuestions[currentQuestion].answer) {
+        score++;
+    }
+
+    currentQuestion++;
+
+    if (currentQuestion < englishQuestions.length) {
+        loadQuestion();
+        document.getElementById("score").innerText =
+            "Score: " + score;
+    } else {
+        document.querySelector(".subject-card").innerHTML =
+        "<h2>Test Completed</h2>" +
+        "<h3>Your Score: " + score + " / " + englishQuestions.length + "</h3>";
+    }
+}
+
+window.onload = loadQuestion;
