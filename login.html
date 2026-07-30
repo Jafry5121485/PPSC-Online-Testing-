@@ -83,6 +83,30 @@ a{
 <a href="register.html">Register</a></p>
 
 </div>
+    <p>Don't have an account?
+<a href="register.html">Register</a></p>
+
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let email = document.querySelector('input[type="email"]').value;
+let password = document.querySelector('input[type="password"]').value;
+
+let user = JSON.parse(localStorage.getItem("ppscUser"));
+
+if(user && user.email === email && user.password === password){
+    alert("Login Successful!");
+    window.location.href = "index.html";
+}else{
+    alert("Invalid Email or Password!");
+}
+
+});
+</script>
 
 </body>
 </html>
