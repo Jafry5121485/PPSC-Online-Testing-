@@ -155,3 +155,21 @@ header img{
 .btn{
     margin-top:10px;
     }
+.correct{
+    background:#28a745 !important;
+    color:#fff;
+}
+
+.wrong{
+    background:#dc3545 !important;
+    color:#fff;
+}
+
+.option{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.option:hover{
+    background:#ffc107;
+}
