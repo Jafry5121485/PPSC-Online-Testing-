@@ -564,3 +564,33 @@ function nextQuestion() {
 }
 
 window.onload = loadQuestion;
+// Timer
+let timeLeft = 20 * 60; // 20 minutes
+
+function startTimer() {
+
+    let timer = setInterval(function () {
+
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+
+        document.getElementById("timer").innerText =
+            "Time Left: " +
+            minutes + ":" +
+            (seconds < 10 ? "0" : "") + seconds;
+
+        timeLeft--;
+
+        if (timeLeft < 0) {
+            clearInterval(timer);
+
+            document.querySelector(".subject-card").innerHTML =
+                "<h2>Time Over!</h2>" +
+                "<h3>Your Score: " + score + " / " + englishQuestions.length + "</h3>";
+        }
+
+    }, 1000);
+
+}
+
+startTimer();
