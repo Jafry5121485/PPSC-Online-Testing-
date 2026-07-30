@@ -521,11 +521,23 @@ function loadQuestion() {
     selectedAnswer = -1;
 }
 
-function checkAnswer(index) {
-    selectedAnswer = index;
 
-    optionButtons.forEach(btn => btn.style.background = "");
-    optionButtons[index].style.background = "#ffc107";
+function checkAnswer(index){
+
+selectedAnswer = index;
+
+optionButtons.forEach(btn=>{
+    btn.disabled = true;
+    btn.classList.remove("correct","wrong");
+});
+
+if(index === englishQuestions[currentQuestion].answer){
+    optionButtons[index].classList.add("correct");
+}else{
+    optionButtons[index].classList.add("wrong");
+    optionButtons[englishQuestions[currentQuestion].answer].classList.add("correct");
+}
+
 }
 
 function nextQuestion() {
@@ -536,7 +548,11 @@ function nextQuestion() {
 
     currentQuestion++;
 
-    if (currentQuestion < englishQuestions.length) {
+    if (currentQuestion < englishQuestions.length) 
+      optionButtons.forEach(btn=>{
+    btn.disabled = false;
+});
+    {
         loadQuestion();
         document.getElementById("score").innerText =
             "Score: " + score;
