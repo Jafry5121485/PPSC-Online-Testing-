@@ -142,3 +142,16 @@ header img{
     max-width:100px !important;
     height:auto !important;
     }
+/* English Test Options */
+.option{
+    display:block;
+    width:90%;
+    margin:10px auto;
+    padding:15px;
+    font-size:18px;
+    border-radius:8px;
+}
+
+.btn{
+    margin-top:10px;
+    }
