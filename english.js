@@ -557,9 +557,12 @@ function nextQuestion() {
         document.getElementById("score").innerText =
             "Score: " + score;
     } else {
-        document.querySelector(".subject-card").innerHTML =
-        "<h2>Test Completed</h2>" +
-        "<h3>Your Score: " + score + " / " + englishQuestions.length + "</h3>";
+
+    localStorage.setItem("score", score);
+    localStorage.setItem("total", englishQuestions.length);
+
+    window.location.href = "result.html";
+
     }
 }
 
