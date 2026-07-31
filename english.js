@@ -548,54 +548,52 @@ function nextQuestion() {
 
     currentQuestion++;
 
-    
-if (currentQuestion < englishQuestions.length) {
+    if (currentQuestion < englishQuestions.length) {
 
-    optionButtons.forEach(btn => {
-        btn.disabled = false;
-    });
+        optionButtons.forEach(btn => {
+            btn.disabled = false;
+        });
 
-    loadQuestion();
+        loadQuestion();
 
-    document.getElementById("score").innerText =
-        "Score: " + score;
+        document.getElementById("score").innerText = "Score: " + score;
 
-} else {
+    } else {
 
-    localStorage.setItem("score", score);
-    localStorage.setItem("total", englishQuestions.length);
+        localStorage.setItem("score", score);
+        localStorage.setItem("total", englishQuestions.length);
 
-    window.location.href = "result.html";
+        window.location.href = "result.html";
+    }
 }
-      
-          window.onload = loadQuestion;
-// Timer
-let timeLeft = 20 * 60; // 20 minutes
+window.onload = function () {
+    loadQuestion();
+    startTimer();
+};
+let timeLeft = 20 * 60;
 
 function startTimer() {
-
     let timer = setInterval(function () {
 
         let minutes = Math.floor(timeLeft / 60);
         let seconds = timeLeft % 60;
 
         document.getElementById("timer").innerText =
-            "Time Left: " +
-            minutes + ":" +
-            (seconds < 10 ? "0" : "") + seconds;
+            "Time Left: " + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
 
         timeLeft--;
 
         if (timeLeft < 0) {
             clearInterval(timer);
 
-            document.querySelector(".subject-card").innerHTML =
-                "<h2>Time Over!</h2>" +
-                "<h3>Your Score: " + score + " / " + englishQuestions.length + "</h3>";
+            localStorage.setItem("score", score);
+            localStorage.setItem("total", englishQuestions.length);
+
+            window.location.href = "result.html";
         }
 
     }, 1000);
-
 }
+  
 
 startTimer();
