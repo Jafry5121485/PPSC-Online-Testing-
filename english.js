@@ -548,25 +548,27 @@ function nextQuestion() {
 
     currentQuestion++;
 
-    if (currentQuestion < englishQuestions.length) 
-      optionButtons.forEach(btn=>{
-    btn.disabled = false;
-});
-    {
-        loadQuestion();
-        document.getElementById("score").innerText =
-            "Score: " + score;
-    } else {
+    
+if (currentQuestion < englishQuestions.length) {
+
+    optionButtons.forEach(btn => {
+        btn.disabled = false;
+    });
+
+    loadQuestion();
+
+    document.getElementById("score").innerText =
+        "Score: " + score;
+
+} else {
 
     localStorage.setItem("score", score);
     localStorage.setItem("total", englishQuestions.length);
 
     window.location.href = "result.html";
-
-    }
 }
-
-window.onload = loadQuestion;
+      
+          window.onload = loadQuestion;
 // Timer
 let timeLeft = 20 * 60; // 20 minutes
 
