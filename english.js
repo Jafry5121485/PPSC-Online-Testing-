@@ -504,10 +504,13 @@ const englishQuestions = [
 let currentQuestion = 0;
 let score = 0;
 let selectedAnswer = -1;
+let timeLeft = 20 * 60;
+let timer;
 
 const optionButtons = document.querySelectorAll(".option");
 
 function loadQuestion() {
+
     const q = englishQuestions[currentQuestion];
 
     document.getElementById("question").innerText =
@@ -515,29 +518,29 @@ function loadQuestion() {
 
     optionButtons.forEach((btn, index) => {
         btn.innerText = q.options[index];
-        btn.style.background = "";
+        btn.disabled = false;
+        btn.classList.remove("correct", "wrong");
     });
 
     selectedAnswer = -1;
 }
 
+function checkAnswer(index) {
 
-function checkAnswer(index){
+    selectedAnswer = index;
 
-selectedAnswer = index;
+    optionButtons.forEach(btn => {
+        btn.disabled = true;
+    });
 
-optionButtons.forEach(btn=>{
-    btn.disabled = true;
-    btn.classList.remove("correct","wrong");
-});
+    if (index === englishQuestions[currentQuestion].answer) {
+        optionButtons[index].classList.add("correct");
+    } else {
+        optionButtons[index].classList.add("wrong");
+        optionButtons[englishQuestions[currentQuestion].answer].classList.add("correct");
+    }
 
-if(index === englishQuestions[currentQuestion].answer){
-    optionButtons[index].classList.add("correct");
-}else{
-    optionButtons[index].classList.add("wrong");
-    optionButtons[englishQuestions[currentQuestion].answer].classList.add("correct");
-}
-
+    setTimeout(nextQuestion, 1000);
 }
 
 function nextQuestion() {
@@ -546,19 +549,17 @@ function nextQuestion() {
         score++;
     }
 
+    document.getElementById("score").innerText = "Score: " + score;
+
     currentQuestion++;
 
     if (currentQuestion < englishQuestions.length) {
 
-        optionButtons.forEach(btn => {
-            btn.disabled = false;
-        });
-
         loadQuestion();
 
-        document.getElementById("score").innerText = "Score: " + score;
-
     } else {
+
+        clearInterval(timer);
 
         localStorage.setItem("score", score);
         localStorage.setItem("total", englishQuestions.length);
@@ -566,14 +567,10 @@ function nextQuestion() {
         window.location.href = "result.html";
     }
 }
-window.onload = function () {
-    loadQuestion();
-    startTimer();
-};
-let timeLeft = 20 * 60;
 
 function startTimer() {
-    let timer = setInterval(function () {
+
+    timer = setInterval(function () {
 
         let minutes = Math.floor(timeLeft / 60);
         let seconds = timeLeft % 60;
@@ -584,6 +581,7 @@ function startTimer() {
         timeLeft--;
 
         if (timeLeft < 0) {
+
             clearInterval(timer);
 
             localStorage.setItem("score", score);
@@ -594,6 +592,8 @@ function startTimer() {
 
     }, 1000);
 }
-  
 
-startTimer();
+window.onload = function () {
+    loadQuestion();
+    startTimer();
+};
