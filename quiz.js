@@ -61,3 +61,36 @@ function nextQuestion() {
         window.location.href = "result.html";
     }
                }
+function startTimer() {
+
+    timer = setInterval(function () {
+
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+
+        document.getElementById("timer").innerText =
+            minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+
+        timeLeft--;
+
+        if (timeLeft < 0) {
+
+            clearInterval(timer);
+
+            localStorage.setItem("score", score);
+            localStorage.setItem("total", quizQuestions.length);
+
+            window.location.href = "result.html";
+        }
+
+    }, 1000);
+}
+
+window.onload = function () {
+
+    document.getElementById("score").innerText = score;
+
+    loadQuestion();
+
+    startTimer();
+};
