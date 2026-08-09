@@ -2,49 +2,126 @@ let currentQuestion = 0;
 let score = 0;
 
 function loadQuestion() {
-    document.getElementById("question").innerHTML = englishQuestions[currentQuestion].question;
 
-    let options = document.getElementsByClassName("option");
+    const q = englishQuestions[currentQuestion];
 
-    for (let i = 0; i < 4; i++) {
-        options[i].innerHTML = englishQuestions[currentQuestion].options[i];
+    // Question
+    document.getElementById("question").innerText =
+        (currentQuestion + 1) + ". " + q.question;
+
+    // Options
+    const options = document.querySelectorAll(".option");
+
+    options.forEach((btn, index) => {
+        btn.innerText = q.options[index];
+        btn.disabled = false;
+
+        // Remove old classes
+        btn.classList.remove("correct");
+        btn.classList.remove("wrong");
+    });
+
+    // Score
+    document.getElementById("score").innerText =
+        "Score: " + score;
+
+    // Question number اگر HTML میں موجود ہے
+    const questionNumber = document.getElementById("questionNumber");
+
+    if (questionNumber) {
+        questionNumber.innerText =
+            "Question " + (currentQuestion + 1) +
+            " / " + englishQuestions.length;
     }
 
-    document.getElementById("score").innerHTML = "Score: " + score;
+    // Message clear
+    const message = document.getElementById("message");
+
+    if (message) {
+        message.innerHTML = "";
+    }
 }
 
 
 function checkAnswer(selected) {
 
-  // Dobara click hone se bachaye
-  document.querySelectorAll(".option").forEach(btn => {
-    btn.disabled = true;
-  });
+    const q = englishQuestions[currentQuestion];
 
-  // Correct answer
-  if (selected === currentQuestion.answer) {
-    score++;
-    document.getElementById("score").innerText = score;
+    const options = document.querySelectorAll(".option");
 
-    document.getElementById("message").innerHTML =
-      "<span style='color:green;font-weight:bold;'>✅ Correct Answer</span>";
-  } else {
-    document.getElementById("message").innerHTML =
-      "<span style='color:red;font-weight:bold;'>❌ Wrong Answer</span>";
-  }
+    // Disable all options
+    options.forEach(btn => {
+        btn.disabled = true;
+    });
 
-  // 1 second baad next question
-  setTimeout(() => {
+    const message = document.getElementById("message");
 
-    document.getElementById("message").innerHTML = "";
+    // Check answer
+    if (selected === q.answer) {
 
-    currentIndex++;
+        score++;
 
-    if (currentIndex < questions.length) {
-      loadQuestion();
+        options[selected].classList.add("correct");
+
+        if (message) {
+            message.innerHTML =
+                "<span style='color:green;font-weight:bold;'>✅ Correct Answer</span>";
+        }
+
     } else {
-      endTest();
+
+        options[selected].classList.add("wrong");
+
+        // Correct option show کریں
+        options[q.answer].classList.add("correct");
+
+        if (message) {
+            message.innerHTML =
+                "<span style='color:red;font-weight:bold;'>❌ Wrong Answer</span>";
+        }
     }
 
-  }, 1000);
+    document.getElementById("score").innerText =
+        "Score: " + score;
 }
+
+
+// Next Question
+function nextQuestion() {
+
+    if (currentQuestion < englishQuestions.length - 1) {
+
+        currentQuestion++;
+
+        loadQuestion();
+
+    } else {
+
+        endTest();
+    }
+}
+
+
+// Test End
+function endTest() {
+
+    document.getElementById("question").innerText =
+        "Test Completed! 🎉";
+
+    document.querySelectorAll(".option").forEach(btn => {
+        btn.style.display = "none";
+    });
+
+    const nextBtn = document.getElementById("nextButton");
+
+    if (nextBtn) {
+        nextBtn.style.display = "none";
+    }
+
+    document.getElementById("score").innerText =
+        "Final Score: " + score + " / " + englishQuestions.length;
+}
+
+
+// Start Test
+loadQuestion();
