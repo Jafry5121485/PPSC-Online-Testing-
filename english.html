@@ -1,38 +1,57 @@
 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>English Test</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-<h1>English MCQs Test</h1>
-<p>PPSC Online Testing Portal</p>
+    <h1>English MCQs Test</h1>
+    <p>PPSC Online Testing Portal</p>
 </header>
 
 <section class="hero">
-<h2>English Test</h2>
+
+    <h2>English Test</h2>
+
     <h3 id="timer">Time Left: 20:00</h3>
 
-<div class="subject-card">
-    <h3 id="question">Question will appear here</h3>
+    <div class="subject-card">
 
-    <button class="btn option" onclick="checkAnswer(0)"></button>
-<button class="btn option" onclick="checkAnswer(1)"></button>
-<button class="btn option" onclick="checkAnswer(2)"></button>
-<button class="btn option" onclick="checkAnswer(3)"></button>
-        
-        <button class="btn" onclick="nextQuestion()">Next Question</button>
+        <h3 id="question">
+            Question will appear here
+        </h3>
 
-    <h3 id="score">Score: 0</h3>
-</div>
+        <button class="btn option" onclick="checkAnswer(0)"></button>
+
+        <button class="btn option" onclick="checkAnswer(1)"></button>
+
+        <button class="btn option" onclick="checkAnswer(2)"></button>
+
+        <button class="btn option" onclick="checkAnswer(3)"></button>
+
+        <p id="message"></p>
+
+        <button id="nextButton" class="btn" onclick="nextQuestion()">
+            Next Question
+        </button>
+
+        <h3 id="score">Score: 0</h3>
+
+    </div>
 
 </section>
-  <script src="english.js"></script>
+
+<script src="english.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
