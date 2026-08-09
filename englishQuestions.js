@@ -616,5 +616,136 @@ const englishQuestions = [
         "The news have been very good."
     ],
     answer: 1
+},
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+
+function loadQuestion() {
+
+    const q = englishQuestions[currentQuestion];
+
+    // Question
+    document.getElementById("question").innerText =
+        "Question " + (currentQuestion + 1) + ". " + q.question;
+
+
+    // Options
+    const options = document.querySelectorAll(".option");
+
+    options.forEach(function(button, index) {
+
+        button.innerText = q.options[index];
+
+        button.disabled = false;
+
+        button.classList.remove("correct");
+        button.classList.remove("wrong");
+
+    });
+
+
+    // Score
+    document.getElementById("score").innerText =
+        "Score: " + score;
+
+
+    // Message
+    document.getElementById("message").innerHTML = "";
 }
 
+
+
+function checkAnswer(selected) {
+
+    const q = englishQuestions[currentQuestion];
+
+    const options = document.querySelectorAll(".option");
+
+
+    // Disable buttons
+    options.forEach(function(button) {
+        button.disabled = true;
+    });
+
+
+    // Correct answer
+    if (selected === q.answer) {
+
+        score++;
+
+        options[selected].classList.add("correct");
+
+        document.getElementById("message").innerHTML =
+            "<span style='color:green;font-weight:bold;'>✅ Correct Answer</span>";
+
+    }
+
+    // Wrong answer
+    else {
+
+        options[selected].classList.add("wrong");
+
+        options[q.answer].classList.add("correct");
+
+        document.getElementById("message").innerHTML =
+            "<span style='color:red;font-weight:bold;'>❌ Wrong Answer</span>";
+
+    }
+
+
+    document.getElementById("score").innerText =
+        "Score: " + score;
+}
+
+
+
+function nextQuestion() {
+
+    if (currentQuestion < englishQuestions.length - 1) {
+
+        currentQuestion++;
+
+        loadQuestion();
+
+    }
+
+    else {
+
+        endTest();
+
+    }
+
+}
+
+
+
+function endTest() {
+
+    document.getElementById("question").innerText =
+        "🎉 English Test Completed!";
+
+
+    document.querySelectorAll(".option").forEach(function(button) {
+        button.style.display = "none";
+    });
+
+
+    document.getElementById("nextButton").style.display = "none";
+
+
+    document.getElementById("score").innerText =
+        "Final Score: " + score + " / " + englishQuestions.length;
+
+
+    document.getElementById("message").innerHTML =
+        "<strong>Well Done!</strong>";
+
+}
+
+
+
+// Start Test
+loadQuestion();
